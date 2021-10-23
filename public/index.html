@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Secret Formula</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <h1>TikTok Secret Formula</h1>
+    <h2 id="displayData"></h2>
+    <div id="start">
+        <h2>
+            Tell Me about Yourself
+        </h2>
+        <button onclick="startForm()">Start</button>
+        <br>
+    </div>
+    <div class="hide" id="question-box">
+        <h2 id="question"></h2>
+        <div id="submitAnswerSec">
+            <div id="choices"></div>
+            <div class='input-section'>
+                <input type="text" class="answer-input">
+                <div id="answer-button"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="hide">
+        New User Successful
+    </div> -->
+    <form id="endForm" class="hide">
+        <div id="end-screen"></div>
+        <button type="button" id="submit">Submit</button>
+    </form>
+</body>
+<script src="./assets/js/scripts.js"></script>
+<script src="assets/js/questions.js"></script>
+<script src="./assets/js/api.js"></script>
+</html>
