@@ -6,7 +6,8 @@ module.exports = {
   },
   newStudent: (request, response) => {
       console.log("new student", request.body)
-    Student.create(request.body)
+    Student.create(
+      {qa: request.body})
       .then((newStudent) =>
         response.json({ message: "success", results: newStudent })
       )

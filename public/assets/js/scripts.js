@@ -21,6 +21,7 @@ const submit = document.getElementById('submit')
 const startForm = () => {
   startMenu.classList.add("hide");
   questionSection.classList.remove("hide");
+  // endForm.classList.add("hide")
   getQuestion(0);
 };
 

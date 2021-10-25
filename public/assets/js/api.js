@@ -1,16 +1,15 @@
-// const submit = document.getElementById('submit')
-
 submit.addEventListener("click", async (event) => {
     event.preventDefault();
     await doSubmit()
+    window.location.reload()
 })
 
 const doSubmit = () => {
     console.log('submit', userAnswers)
     return fetch('http://localhost:9000/api/enroll', {
         method: 'POST',
-        // body: JSON.parse(submit.getAttribute('userAnswers'))
-        body: userAnswers
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(userAnswers)
     });
 }
 

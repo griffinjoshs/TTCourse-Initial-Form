@@ -73,9 +73,4 @@ const questions = [
     },
 ]
 
-let userAnswers = [
-    {
-        question: '',
-        answer: ''
-    }
-]
+let userAnswers = []
