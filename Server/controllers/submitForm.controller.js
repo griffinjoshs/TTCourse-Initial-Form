@@ -5,7 +5,7 @@ module.exports = {
     response.json({ message: "Backend Server Running" });
   },
   newStudent: (request, response) => {
-      console.log("new student", request.body)
+      // console.log("new student", request.body)
     Student.create(
       {qa: request.body})
       .then((newStudent) =>

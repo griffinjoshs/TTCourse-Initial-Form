@@ -8,6 +8,10 @@ const questions = [
         answerID: "lastName"
     },
     {
+        question: "What is your email?",
+        answerID: "email"
+    },
+    {
         question: "How old are u?",
         answerID: "age"
         },

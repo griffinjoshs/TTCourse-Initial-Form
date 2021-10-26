@@ -40,7 +40,7 @@ const getQuestion = (index) => {
   } else {
     for (let i = 0; i < q.choices.length; i++) {
       let choices =
-        `<button class='answer-choice' id="${q.choices[i].answerID}" ` +
+        `<button class='answer-choice' id="${q.choices[i].answerID}" name='${q.choices[i].answerID}' ` +
         `onclick="handleAnswer(event, ${index})">${q.choices[i].text}</button>`;
       choiceButtons.innerHTML += choices;
     }
