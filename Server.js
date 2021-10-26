@@ -22,12 +22,12 @@ console.log(__dirname)
 require("./Server/routes/submitForm.routes")(app)
 require("./Server/routes/nodeMailerRoutes")(app)
 
+const connectionString = "mongodb+srv://griff:mets9999@cluster0.sgerx.mongodb.net/ttsecretformulaDb?retryWrites=true&w=majority"
+
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost/ttsecretformulaDb", {
+  .connect(connectionString || "mongodb://localhost/ttsecretformulaDb", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    // useCreateIndex: true,
-    // useFindAndModify: false,
   })
   .then(() => console.log("Connected To Database!!"))
   .catch((err) => console.log("error:" + err));
