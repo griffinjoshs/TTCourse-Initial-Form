@@ -17,8 +17,8 @@ app.use(express.static(__dirname + '/public'));
     res.sendFile("/index.html");
 });
 
-require("./Server/routes/submitForm.routes")(app)
-require("./Server/routes/nodeMailerRoutes")(app)
+require("./server/routes/submitForm.routes")(app)
+require("./server/routes/nodeMailerRoutes")(app)
 
 const connectionString = process.env.DB_CONNECTION
 
