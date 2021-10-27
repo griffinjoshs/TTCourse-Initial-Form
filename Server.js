@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 9000;
 const path = require("path");
 const mongoose = require("mongoose");
-require("dotenv").config();
+require("dotenv").config()
 
 // Serve static content for the app from the "public" directory in the application directory.
 // (html allower)
