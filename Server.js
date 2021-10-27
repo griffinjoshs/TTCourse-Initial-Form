@@ -14,14 +14,13 @@ app.use(express.static(__dirname + '/public'));
 
   // INDEX HTML
   app.get("/", function (req, res) {
-    // res.sendFile(path.join(__dirname, "/public/index.html"));
     res.sendFile("/index.html");
 });
 
 require("./Server/routes/submitForm.routes")(app)
 require("./Server/routes/nodeMailerRoutes")(app)
 
-const connectionString = "mongodb+srv://griff:mets9999@cluster0.sgerx.mongodb.net/ttsecretformulaDb?retryWrites=true&w=majority"
+const connectionString = process.env.DB_CONNECTION
 
 mongoose
   .connect(connectionString || "mongodb://localhost/ttsecretformulaDb", {
