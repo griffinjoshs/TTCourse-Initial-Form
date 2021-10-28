@@ -20,10 +20,8 @@ app.use(express.static(__dirname + '/public'));
 require("./server/routes/submitForm.routes")(app)
 require("./server/routes/nodeMailerRoutes")(app)
 
-const connectionString = process.env.DB_CONNECTION
-
 mongoose
-  .connect(connectionString || "mongodb://localhost/ttsecretformulaDb", {
+  .connect(process.env.DB_CONNECTION || "mongodb://localhost/ttsecretformulaDb", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
