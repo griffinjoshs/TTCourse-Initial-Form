@@ -7,7 +7,7 @@ submit.addEventListener("click", async (event) => {
 
 const doSubmit = () => {
     console.log('submit', userAnswers)
-    return fetch('http://localhost:9000/api/enroll', {
+    return fetch('/api/enroll', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(userAnswers)
@@ -15,7 +15,7 @@ const doSubmit = () => {
 }
 
 const sendForm = () => {
-    return fetch('http://localhost:9000/api/send', {
+    return fetch('/api/send', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         // body: JSON.stringify(userAnswers)
