@@ -21,7 +21,7 @@ require("./server/routes/submitForm.routes")(app)
 require("./server/routes/nodeMailerRoutes")(app)
 
 mongoose
-  .connect(process.env.DB_CONNECTION || "mongodb://localhost/ttsecretformulaDb", {
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/ttsecretformulaDb", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
